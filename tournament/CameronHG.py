@@ -1,6 +1,6 @@
 import random
 
-team_name = 'Massive Cash Prizes'
+team_name = 'MassiveCashPrizes'
 strategy_name = 'Reactive'
 strategy_description = 'Get the bag'
 
