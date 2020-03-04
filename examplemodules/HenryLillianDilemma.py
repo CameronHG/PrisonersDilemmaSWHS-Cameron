@@ -11,6 +11,9 @@ strategy_name = 'our strategy is winning'
 strategy_description =
 
 
+#if the opposing team won their last round, always betray
+#if the opposing team lost their last round, tit-for-tat
+#if there have been x many collude-collude instances in a row, betray for the rest of the time with that opponent
 
 
 import random
