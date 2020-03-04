@@ -49,3 +49,4 @@ for module_path in updated_modules:
     assert os.path.isfile(module_path), "There is no file named {}".format(module_path)
 
 prisoners_dilemma.main(updated_modules, should_rand, suppress_exceptions)
+
