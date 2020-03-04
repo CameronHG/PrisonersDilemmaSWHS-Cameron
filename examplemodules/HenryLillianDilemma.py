@@ -20,27 +20,15 @@ import random
 
 
 def move(my_history, their_history, my_score, their_score, opponent_name):
-    """Make my move based on the history with this player.
+    # Make my move based on the history of this player.
+    #if the player just won - always betray, if they just lost
 
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty.
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
 
-    Returns 'c' or 'b' for collude or betray.
-    """
-    # If the other player has betrayed or this is the last half of the game,
-    if 'b' in their_history or len(their_history) > 100:
-        return 'b'               # Betray.
+
+    if 'b' in their_history[-60:]:  # If the other player has betrayed within last 60 rounds,
+        # tit-for-tat code here
     else:
-        return 'c'         # but 90% of the time collude
-
-
-
-
-
-
-
+        # betray for the rest of the time
 
 
 #!/usr/bin/python3
