@@ -6,14 +6,13 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'Henry and Lillian'
-strategy_name = 'our strategy is winning'
-strategy_description =
+team_name = 'HenryAndLillian'
+strategy_name = 'i shidded'
+strategy_description = 'Tit-for-tat until both teams have colluded for 100 rounds in a row, then always betray.'
 
-
-#if the opposing team won their last round, always betray
-#if the opposing team lost their last round, tit-for-tat
-#if there have been x many collude-collude instances in a row, betray for the rest of the time with that opponent
+# if the opposing team won their last round, always betray
+# if the opposing team lost their last round, tit-for-tat
+# if there have been x many collude-collude instances in a row, betray for the rest of the time with that opponent
 
 
 import random
@@ -21,22 +20,24 @@ import random
 
 def move(my_history, their_history, my_score, their_score, opponent_name):
     # Make my move based on the history of this player.
-    #if the player just won - always betray, if they just lost
+    # if the player just won - always betray, if they just lost
 
-
-
-    if 'b' in their_history[-60:]:  # If the other player has betrayed within last 60 rounds,
-        # tit-for-tat code here
+    if 'b' not in their_history[-100]:
+        return 'b'
     else:
-        # betray for the rest of the time
+        if 'b' in their_history[-1]:
+            return 'b'
+        if 'c' in their_history[-1]:
+            return 'c'
 
 
-#!/usr/bin/python3
+# !/usr/bin/python3
 """
 An iterated prisoner's dilemma written by Arthur Goldman
 for Southwest High School in Minneapolis's Computer Science class 2016-2017
 arthur@goldman-tribe.org
 agol1801@mpsedu.org
+"""
 """
 import sys
 import prisoners_dilemma
@@ -69,4 +70,4 @@ for module_path in updated_modules:
     assert os.path.isfile(module_path), "There is no file named {}".format(module_path)
 
 prisoners_dilemma.main(updated_modules, should_rand, suppress_exceptions)
-
+"""
