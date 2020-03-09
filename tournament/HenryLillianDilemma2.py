@@ -19,8 +19,7 @@ import random
 
 
 def move(my_history, their_history, my_score, their_score, opponent_name):
-    # Make my move based on the history of this player.
-    # if the player just won - always betray, if they just lost
+
 
     def myprisoners_dilemma():
         """
@@ -254,7 +253,6 @@ def move(my_history, their_history, my_score, their_score, opponent_name):
         myprisoners_dilemma.main(updated_modules, should_rand, suppress_exceptions)
 
 
-    #hgjhgj
     myiterateddilemma()
 
 
