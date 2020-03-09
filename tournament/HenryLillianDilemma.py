@@ -15,20 +15,22 @@ strategy_description = 'Tit-for-tat until both teams have colluded for 100 round
 # if there have been x many collude-collude instances in a row, betray for the rest of the time with that opponent
 
 
-import random
-
+import GLOBALS
 
 def move(my_history, their_history, my_score, their_score, opponent_name):
     # Make my move based on the history of this player.
     # if the player just won - always betray, if they just lost
 
-    if 'b' not in their_history[-100]:
-        return 'b'
+    if len(my_history) == 0:
+        return GLOBALS.COLLUDE
     else:
-        if 'b' in their_history[-1]:
-            return 'b'
-        if 'c' in their_history[-1]:
-            return 'c'
+        if 100 > len(my_history) and 'b' not in their_history[-100]:
+            return GLOBALS.BETRAY
+        else:
+            if GLOBALS.BETRAY in their_history[-1]:
+                return GLOBALS.BETRAY
+            if GLOBALS.COLLUDE in their_history[-1]:
+                return GLOBALS.COLLUDE
 
 
 # !/usr/bin/python3
