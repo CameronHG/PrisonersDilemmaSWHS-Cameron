@@ -8,11 +8,7 @@
 
 team_name = 'HenryAndLillian'
 strategy_name = 'Our Strategy is Winning'
-strategy_description = 'Responses based on the opponent. If that fails, tit-for-tat until both teams have colluded for 100 rounds in a row, then always betray.'
-
-# if the opposing team won their last round, always betray
-# if the opposing team lost their last round, tit-for-tat
-# if there have been x many collude-collude instances in a row, betray for the rest of the time with that opponent
+strategy_description = 'Responses are based on the opponent. If that fails, tit-for-tat until both teams have colluded for 100 rounds in a row, then always betray.'
 
 
 import GLOBALS
@@ -55,7 +51,6 @@ def move(my_history, their_history, my_score, their_score, opponent_name):
 
 
 
-# !/usr/bin/python3
 """
 An iterated prisoner's dilemma written by Arthur Goldman
 for Southwest High School in Minneapolis's Computer Science class 2016-2017
