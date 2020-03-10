@@ -7,8 +7,8 @@
 ####
 
 team_name = 'HenryAndLillian'
-strategy_name = 'asdf'
-strategy_description = 'Tit-for-tat until both teams have colluded for 100 rounds in a row, then always betray.'
+strategy_name = 'Our Strategy is Winning'
+strategy_description = 'Responses based on the opponent. If that fails, tit-for-tat until both teams have colluded for 100 rounds in a row, then always betray.'
 
 # if the opposing team won their last round, always betray
 # if the opposing team lost their last round, tit-for-tat
@@ -18,19 +18,41 @@ strategy_description = 'Tit-for-tat until both teams have colluded for 100 round
 import GLOBALS
 
 def move(my_history, their_history, my_score, their_score, opponent_name):
-    # Make my move based on the history of this player.
-    # if the player just won - always betray, if they just lost
 
-    if len(my_history) == 0:
-        return GLOBALS.COLLUDE
+    if (opponent_name) == 'insertopponentnamehere':
+        return 'c'
+    if (opponent_name) == 'insertopponentnamehere':
+        return 'c'
+    if (opponent_name) == 'insertopponentnamehere':
+        return 'c'
+    if (opponent_name) == 'insertopponentnamehere':
+        return 'c'
+    if (opponent_name) == 'insertopponentnamehere':
+        return 'c'
+    if (opponent_name) == 'insertopponentnamehere':
+        return 'c'
+    if (opponent_name) == 'insertopponentnamehere':
+        return 'c'
+    if (opponent_name) == 'insertopponentnamehere':
+        return 'c'
+    if (opponent_name) == 'insertopponentnamehere':
+        return 'c'
+    if (opponent_name) == 'insertopponentnamehere':
+        return 'c'
     else:
-        if 100 < len(my_history) and 'b' not in their_history[-100]:
-            return GLOBALS.BETRAY
+        if len(my_history) == 0:
+            return GLOBALS.COLLUDE
         else:
-            if GLOBALS.BETRAY in their_history[-1]:
+            if 100 < len(my_history) and 'b' not in their_history[-100]:
                 return GLOBALS.BETRAY
-            if GLOBALS.COLLUDE in their_history[-1]:
-                return GLOBALS.COLLUDE
+            else:
+                if GLOBALS.BETRAY in their_history[-1]:
+                    return GLOBALS.BETRAY
+                if GLOBALS.COLLUDE in their_history[-1]:
+                    return GLOBALS.COLLUDE
+
+
+
 
 
 # !/usr/bin/python3
