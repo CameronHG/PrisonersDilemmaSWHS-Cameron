@@ -7,7 +7,7 @@
 ####
 
 team_name = 'HenryAndLillian'
-strategy_name = 'i shidded'
+strategy_name = 'asdf'
 strategy_description = 'Tit-for-tat until both teams have colluded for 100 rounds in a row, then always betray.'
 
 # if the opposing team won their last round, always betray
@@ -24,7 +24,7 @@ def move(my_history, their_history, my_score, their_score, opponent_name):
     if len(my_history) == 0:
         return GLOBALS.COLLUDE
     else:
-        if 100 > len(my_history) and 'b' not in their_history[-100]:
+        if 100 < len(my_history) and 'b' not in their_history[-100]:
             return GLOBALS.BETRAY
         else:
             if GLOBALS.BETRAY in their_history[-1]:
